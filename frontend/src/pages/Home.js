@@ -136,7 +136,7 @@ function Home() {
     //     </div>
     // )
     return(
-        <div>
+        <div className='home-page'>
             <div className='user-section'>
                 <h2>Welcome {loggedInUser}</h2>
                 <button onClick={handleLogout} className='normalpad'>Logout</button>
@@ -161,7 +161,7 @@ function Home() {
             </div>
 
             <ToastContainer />
-            </div>
+        </div>
 
     )
 }

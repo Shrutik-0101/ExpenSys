@@ -55,6 +55,7 @@ function Signup() {
     }
     return (
         <div className='container'>
+            <h2 className="app-title">ExpenSys</h2> 
             <h1>Signup</h1>
             <form onSubmit={handleSignup}>
                 <div>

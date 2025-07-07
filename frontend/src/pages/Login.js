@@ -58,6 +58,7 @@ function Login() {
 
     return (
         <div className='container'>
+            <h2 className="app-title">ExpenSys</h2> 
             <h1>Login</h1>
             <form onSubmit={handleLogin}>
                 <div>
