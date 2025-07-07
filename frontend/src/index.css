@@ -20,6 +20,26 @@ body{
   width: 100vw;
 }
 
+.home-layout {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 150px); /* Adjust 150px if header height is different */
+}
+
+.left-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right-panel {
+  flex: 1;
+  min-width: 300px;
+  border-left: 2px solid #ffb300;
+  padding-left: 10px;
+  overflow-y: auto;
+}
+
+
 body{
   display: flex;
   justify-content: center;
@@ -144,21 +164,37 @@ button:hover {
   background-color: #674100;
 }
 
-.user-section{
+.user-section {
   display: flex;
+  background-color: #654a00;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
   justify-content: space-between;
+  margin-top: 60px;  /* ✅ this adds space from the top */
 }
 
-/* Minimal styling for the expense list */
+
+h2{
+  color:#ffffff;
+}
+
 .expense-list {
   font-family: Arial, sans-serif;
+  overflow-y: auto;
 }
 
 .expense-item {
   display: flex;
+  padding: 0px;
+  margin: 15px 1px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
+  background-color: rgb(114, 65, 0);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
 }
 
 .expense-description {
@@ -183,17 +219,35 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-  font-family: Arial, sans-serif;
+  margin: 21px 0;
+  font-weight: bold;
   font-size: 18px;
 }
 
 .income-amount {
-  color: #27ae60;
+  color: #97ff6a;
+  background-color: #825b00;
+  padding: 4px 7px;
+  border-radius: 3px;
   font-weight: bold;
 }
 
+.normalpad{
+  border: none;
+  margin-left: 40px;
+  background-color: rgb(255, 204, 0);
+  color:rgb(0, 0, 0);
+}
+
+.normalpad:hover{
+  background-color: rgb(255, 255, 255);
+  color: #674100;
+}
+
 .expense-amount{
-  color: #c0392b;
+  color: #ff5858;
+  background-color: #825b00;
+  padding: 4px 7px;
+  border-radius: 3px;
   font-weight: bold;
 }

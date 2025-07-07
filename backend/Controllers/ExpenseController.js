@@ -11,13 +11,13 @@ const addTransaction = async (req, res) => {
         )
         res.status(200)
             .json({
-                message: "Expense added successfully",
+                message: "Expense Added Successfully",
                 success: true,
                 data: userData?.expenses
             })
     } catch (err) {
         return res.status(500).json({
-            message: "Something went wrong",
+            message: "Something Went Wrong",
             error: err,
             success: false
         })
@@ -31,13 +31,13 @@ const getAllTransactions = async (req, res) => {
         const userData = await UserModel.findById(_id).select('expenses');
         res.status(200)
             .json({
-                message: "Fetched Expenses successfully",
+                message: "Fetched Expenses Successfully",
                 success: true,
                 data: userData?.expenses
             })
     } catch (err) {
         return res.status(500).json({
-            message: "Something went wrong",
+            message: "Something Went Wrong",
             error: err,
             success: false
         })
@@ -55,13 +55,13 @@ const deleteTransaction = async (req, res) => {
         )
         res.status(200)
             .json({
-                message: "Expense Deleted successfully",
+                message: "Expense Deleted Successfully",
                 success: true,
                 data: userData?.expenses
             })
     } catch (err) {
         return res.status(500).json({
-            message: "Something went wrong",
+            message: "Something Went Wrong",
             error: err,
             success: false
         })

@@ -114,27 +114,58 @@ function Home() {
         fetchExpenses()
     }, [])
 
-    return (
+    // return (
+    //     <div>
+    //         <div className='user-section'>
+    //             <h2>Welcome {loggedInUser}</h2>
+    //             <button onClick={handleLogout} className='normalpad'>Logout</button>
+    //         </div>
+    //         <ExpenseDetails
+    //             incomeAmt={incomeAmt}
+    //             expenseAmt={expenseAmt}
+    //         />
+
+    //         <ExpenseForm
+    //             addTransaction={addTransaction} />
+
+    //         <ExpenseTable
+    //             expenses={expenses}
+    //             deleteExpens={deleteExpens}
+    //         />
+    //         <ToastContainer />
+    //     </div>
+    // )
+    return(
         <div>
             <div className='user-section'>
-                <h1>Welcome {loggedInUser}</h1>
-                <button onClick={handleLogout}>Logout</button>
+                <h2>Welcome {loggedInUser}</h2>
+                <button onClick={handleLogout} className='normalpad'>Logout</button>
             </div>
+
             <ExpenseDetails
                 incomeAmt={incomeAmt}
                 expenseAmt={expenseAmt}
             />
 
-            <ExpenseForm
-                addTransaction={addTransaction} />
+            <div className="home-layout">
+                <div className="left-panel">
+                <ExpenseForm addTransaction={addTransaction} />
+                </div>
 
-            <ExpenseTable
-                expenses={expenses}
-                deleteExpens={deleteExpens}
-            />
+                <div className="right-panel">
+                <ExpenseTable
+                    expenses={expenses}
+                    deleteExpens={deleteExpens}
+                />
+                </div>
+            </div>
+
             <ToastContainer />
-        </div>
+            </div>
+
     )
 }
+
+
 
 export default Home

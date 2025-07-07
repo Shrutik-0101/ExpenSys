@@ -24,7 +24,7 @@ function Signup() {
         e.preventDefault();
         const { name, email, password } = signupInfo;
         if (!name || !email || !password) {
-            return handleError('name, email and password are required')
+            return handleError('Name, Email And Password Are Required')
         }
         try {
             const url = `${APIUrl}/auth/signup`;
