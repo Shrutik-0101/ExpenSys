@@ -89,8 +89,8 @@ function Signup() {
                     />
                 </div>
                 <button type='submit'>Signup</button>
-                <span>Already have an account ?
-                    <Link to="/login">Login</Link>
+                <span className='highlight'>Already have an account ?
+                    <Link to="/login" className='login-link'>Login</Link>
                 </span>
             </form>
             <ToastContainer />

@@ -114,14 +114,34 @@ body{
 }
 
 button{
-  background-color: purple;
+  background-color: #f8d302;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
   border: none;
-  font-size: 15px;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  margin: 10px 0;
+  font-size: 13px;
+  font-weight: bold;
+  border: 3px outset #ffb300;
+  font-family: "Unbounded", cursive;
+  transition: background-color 0.3s;
+}
+
+.login-link {
+  text-decoration: none;   
+  color: #ff9d00;           
+  font-weight: bold;        
+  font-size: 16px;
+  font-family: "Unbounded", cursive;
+}
+
+.login-link:hover {
+  color: #643c00;           
+}
+
+button:hover {
+  color: rgb(255, 204, 0);
+  background-color: #674100;
 }
 
 .user-section{
