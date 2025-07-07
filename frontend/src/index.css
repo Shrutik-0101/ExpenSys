@@ -10,6 +10,8 @@
 
 label{
   font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 7px;
 }
 
 html,
@@ -21,23 +23,32 @@ body{
 body{
   display: flex;
   justify-content: center;
-  font-family: "Ubuntu", sans-serif;
-  background-color: #121212; /* or any dark color you like */
-  color: #87fe00;
-  /* align-items: center; */
+  font-family: "Unbounded", cursive;
+  background-image: url('D:\RES-Projects\Github Public\ExpenSys\frontend\public\8116.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #000000;
+  align-items: center;
 }
 
 .container{
-  background-color: #FFF;
-  padding: 32px 48px;
+  background-color: #ffffff;
+  padding: 48px 48px;
   border-radius: 10px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  border: 5px inset #ffb300;
+  /* box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.2); */
 }
 
 .container > h1{
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Unbounded", cursive;
 }
 
 .container > form{
@@ -60,9 +71,46 @@ body{
   border-bottom: 1px solid black;
 }
 
+.highlight {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.buttton {
+  background-color: #f8d302;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  border: 3px outset #ffb300;
+  font-family: "Unbounded", cursive;
+  transition: background-color 0.3s;
+}
+
+.buttton:hover {
+  color: rgb(255, 204, 0);
+  background-color: #674100;
+}
+
 .container input::placeholder{
-  font-size: 12px;
-  font-style: italic;
+  font-size: 10px;
+  font-family: "Unbounded", cursive;
+}
+
+.signup-link {
+  text-decoration: none;   
+  color: #ff9d00;           
+  font-weight: bold;        
+  font-size: 16px;
+  font-family: "Unbounded", cursive;
+}
+
+.signup-link:hover {
+  color: #643c00;           
 }
 
 button{

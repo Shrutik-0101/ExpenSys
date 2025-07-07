@@ -1,0 +1,1 @@
+mongodb+srv://Shrutik:jDKC65k8BhRVMhMz@expensys.jnwox6e.mongodb.net==REMOVED_MONGO_URI

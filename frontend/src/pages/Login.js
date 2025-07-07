@@ -80,9 +80,9 @@ function Login() {
                         value={loginInfo.password}
                     />
                 </div>
-                <button type='submit'>Login</button>
-                <span>Does't have an account ?
-                    <Link to="/signup">Signup</Link>
+                <button className = "buttton" type='submit'>Login</button>
+                <span class ="highlight">Does't have an account ?
+                    <Link to="/signup" className='signup-link'>Signup</Link>
                 </span>
             </form>
             <ToastContainer />
