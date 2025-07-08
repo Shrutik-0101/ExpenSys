@@ -20,8 +20,8 @@ function Home() {
 
     const handleLogout = (e) => {
         localStorage.removeItem('token');
-        localStorage.removeItem('loggedInUser');
-        handleSuccess('User Loggedout');
+        localStorage.removeItem('Logged In Successfully');
+        handleSuccess('Logged Out Successfully');
         setTimeout(() => {
             navigate('/login');
         }, 1000)
