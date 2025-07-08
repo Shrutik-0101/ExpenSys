@@ -204,7 +204,7 @@ function Home() {
         <div className='home-page'>
             <h1 className="app-title home-title">ExpenSys</h1>
             <div className='user-section'>
-                <h2>Welcome {loggedInUser}</h2>
+                <h2>Welcome {loggedInUser} ✨</h2>
                 <button onClick={handleLogout} className='normalpad'>Logout</button>
             </div>
             <UserProfile user={{
