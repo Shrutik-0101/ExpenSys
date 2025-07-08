@@ -1,15 +1,11 @@
 import React from 'react'
 
-function ExpenseDetails({ incomeAmt, expenseAmt }) {
+function ExpenseDetails({expenseAmt, totalCount }) {
     return (
         <div>
-            <div>
-                Your Balance is ₹ {incomeAmt - expenseAmt}
-            </div>
-            {/* Show Income & Expense amount */}
             <div className="amounts-container">
-                Income
-                <span className="income-amount">₹{incomeAmt}</span>
+                Total Count
+                <span className="details-count">{totalCount} Item/Items</span>
                 Expense
                 <span className="expense-amount">₹{expenseAmt}</span>
             </div>

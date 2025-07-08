@@ -5,7 +5,9 @@ function ExpenseForm({ addTransaction }) {
 
     const [expenseInfo, setExpenseInfo] = useState({
         amount: '',
-        text: ''
+        text: '',
+        date: '',
+        note: ''
     })
 
     const handleChange = (e) => {
@@ -17,18 +19,19 @@ function ExpenseForm({ addTransaction }) {
 
     const addExpenses = (e) => {
         e.preventDefault();
-        const { amount, text } = expenseInfo;
-        if (!amount || !text) {
+        let { amount, text , date, note} = expenseInfo;
+        if (!amount || !text || !date ) {
             handleError('Please add Expense Details');
             return;
         }
-        addTransaction(expenseInfo);
-        setExpenseInfo({ amount: '', text: '' })
+        amount = amount > 0 ? -Math.abs(amount) : amount;
+        addTransaction({ amount, text, date, note });
+        setExpenseInfo({ amount: '', text: '', date: '', note: '' });
     }
 
     return (
         <div className='container'>
-            <h1>Expense Tracker</h1>
+            <h1>Tracker</h1>
             <form onSubmit={addExpenses}>
                 <div>
                     <label htmlFor='text'>Expense Detail</label>
@@ -38,6 +41,25 @@ function ExpenseForm({ addTransaction }) {
                         name='text'
                         placeholder='Enter your Expense Detail...'
                         value={expenseInfo.text}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="date">Date</label>
+                    <input
+                        onChange={handleChange}
+                        type='date'
+                        name='date'
+                        value={expenseInfo.date}
+                    />
+                </div>
+                <div>
+                    <label htmlFor="note">Notes</label>
+                    <input
+                        onChange={handleChange}
+                        type='text'
+                        name='note'
+                        placeholder="Add a note..."
+                        value={expenseInfo.note}
                     />
                 </div>
                 <div>
