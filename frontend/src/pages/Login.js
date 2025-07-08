@@ -57,6 +57,7 @@ function Login() {
     }
 
     return (
+    <div className='auth-page-wrapper'>
         <div className='container'>
             <h2 className="app-title">ExpenSys</h2> 
             <h1>Login</h1>
@@ -88,6 +89,7 @@ function Login() {
             </form>
             <ToastContainer />
         </div>
+    </div>
     )
 }
 
