@@ -33,6 +33,14 @@ const UserSchema = new Schema({
                 type: String,
                 required: false
             },
+            profileImage: {
+                type: String, 
+                default: ''
+            },
+            bio: {
+                type: String,
+                default: ''
+            },
             createdAt: {
                 type: Date,
                 default: Date.now

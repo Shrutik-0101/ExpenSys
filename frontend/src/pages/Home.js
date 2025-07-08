@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify';
 import ExpenseTable from './ExpenseTable';
 import ExpenseDetails from './ExpenseDetails';
 import ExpenseForm from './ExpenseForm';
+import UserProfile from './UserProfile';
 
 function Home() {
     const [loggedInUser, setLoggedInUser] = useState('');
@@ -19,7 +20,7 @@ function Home() {
 
     useEffect(() => {
         setLoggedInUser(localStorage.getItem('loggedInUser'))
-    }, [])
+    }, []);
 
     const handleLogout = (e) => {
         localStorage.removeItem('token');
@@ -206,6 +207,12 @@ function Home() {
                 <h2>Welcome {loggedInUser}</h2>
                 <button onClick={handleLogout} className='normalpad'>Logout</button>
             </div>
+            <UserProfile user={{
+                name: loggedInUser,
+                email: localStorage.getItem("email"),
+                profileImage: localStorage.getItem("profileImage"),
+                bio: "Budgeting every month like a boss"
+            }} />
             <div className="budget-section">
                 <div className="budget-bar-label">
                     Monthly Budget: ₹{monthlyBudget}
