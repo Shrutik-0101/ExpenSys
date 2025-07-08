@@ -54,6 +54,7 @@ function Signup() {
         }
     }
     return (
+    <div className='auth-page-wrapper'>
         <div className='container'>
             <h2 className="app-title">ExpenSys</h2> 
             <h1>Signup</h1>
@@ -96,6 +97,7 @@ function Signup() {
             </form>
             <ToastContainer />
         </div>
+    </div>
     )
 }
 
