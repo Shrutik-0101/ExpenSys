@@ -1,4 +1,4 @@
-# 💸 ExpenSys: Full-Stack Cloud-Based Expense Tracker
+# 💸 ExpenSys: Full-Stack Expense Tracker
 
 ExpenSys is a secure, cloud-native expense tracker app built with **React** and **Node.js**, offering real-time expense tracking, budget visualization, and profile management.
 
